@@ -11,10 +11,11 @@
 /**
  * struct stack_s - doubly linked list representation of a stack (or queue)
  * @n: integer
- * @prev: points tothe previouselement ofthestack (or queue)
- * @next: points tothe nextelement of thestack (or queue)
- * Description: doublylinked listnodestructure
- * for stack,queues,LIFO,FIFO
+ * @prev: points to the previous element of the stack (or queue)
+ * @next: points to the next element of the stack (or queue)
+ *
+ * Description: doubly linked list node structure
+ * for stack, queues, LIFO, FIFO
  */
 typedef struct stack_s
 {
@@ -23,11 +24,12 @@ struct stack_s *prev;
 struct stack_s *next;
 } stack_t;
 /**
- * struct instruction_s - opcodeand itsfunction
+ * struct instruction_s - opcode and its function
  * @opcode: the opcode
- * @f: functionto handletheopcode
- * Description: opcodeand itsfunction
- * for stack,queues,LIFO,FIFO
+ * @f: function to handle the opcode
+ *
+ * Description: opcode and its function
+ * for stack, queues, LIFO, FIFO
  */
 typedef struct instruction_s
 {
