@@ -53,6 +53,7 @@ void mod_op(stack_t **stack, unsigned int line_number);
 void pchar_op(stack_t **stack, unsigned int line_number);
 void pstr_op(stack_t **stack, unsigned int line_number);
 void free_and_close(char *line, FILE *file);
+void free_stack(stack_t *head);
 int is_comment(char *line);
 typedef struct bus_s
 {
