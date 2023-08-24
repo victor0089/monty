@@ -55,6 +55,14 @@ void pstr_op(stack_t **stack, unsigned int line_number);
 void free_and_close(char *line, FILE *file);
 void free_stack(stack_t *stack);
 int is_comment(char *line);
+/**
+ * struct bus_s - variables -args, file, line content
+ * @arg: value
+ * @file: pointer to monty file
+ * @line: line content
+ * @lifi: flag change stack <-> queue
+ * Description: carries values through the program
+ */
 typedef struct bus_s
 {
 	char *arg;
