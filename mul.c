@@ -1,7 +1,7 @@
 #include "monty.h"
 
 /**
- * mul_op - function that multiplies the top two element of the stack.
+ * mul_The opcode mul multiplies the second top element of the stack with the top element of the stack.
  * @stack: Pointerto thestack.
  * @line_number: Linenumber oftheinstruction.
  * Return: void.

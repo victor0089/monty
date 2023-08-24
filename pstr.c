@@ -1,8 +1,7 @@
 #include "monty.h"
 
 /**
- * pstr_op - function thatprintsthe stringstarting at
- * the top of the stack,followed byanewline.
+ * pstr- The opcode pstr prints the string starting at the top of the stack, followed by a new line.
  * @stack: Pointerto thestack.
  * @line_number: Linenumber oftheinstruction.
  * Return: void.

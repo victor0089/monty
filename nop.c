@@ -1,7 +1,7 @@
 #include "monty.h"
 
 /**
- * nop - function thatdonothing.
+ * nop - The opcode nop doesn’t do anything..
  * @stack: Pointerto thestack.
  * @line_number: Linenumber oftheinstruction.
  * Return: void.

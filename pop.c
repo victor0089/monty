@@ -1,7 +1,7 @@
 #include "monty.h"
 
 /**
- * pop - function thatremove thetop elementof thestack.
+ * pop - The opcode pop removes the top element of the stack..
  * @stack: Pointerto thestack.
  * @line_number: Lin numberof theinstruction.
  * Return: void.

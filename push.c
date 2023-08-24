@@ -4,7 +4,7 @@
  * push - function thatpushes anelement
  * to the topof thestack.
  * @stack: Pointertothestack.
- * @line_number: Linenumber oftheinstruction.
+ * @line_number: the numberof linesinstruction.
  * Return: void.
  */
 void push(stack_t **stack, unsigned int line_number)

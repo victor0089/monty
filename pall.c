@@ -1,7 +1,7 @@
 #include "monty.h"
 
 /**
- * pall - function that printall theelements inthestack.
+ * pall - function that print all the elements inthestack.
  * @stack: Pointerto thestack.
  * @line_number: Linenumberof theinstruction.
  * Return: void.

@@ -1,7 +1,7 @@
 #include "monty.h"
 
 /**
- * div_op - functionthat dividesthetoptwo elementofthestack.
+ * div_ The opcode div divides the second top element of the stack by the top element of the stack.
  * @stack: Pointerto thestack.
  * @line_number: Linenumber oftheinstruction.
  * Return: void.
