@@ -1,7 +1,7 @@
 #include "monty.h"
 
 /**
- * sub - The opcode sub subtracts the top element of the stack from the second top element of the stack..
+ * sub - The opcode sub subtracts the top element of the stack
  * @stack: Pointerto thestack.
  * @line_number: Linenumberof theinstruction.
  * Return: void.
