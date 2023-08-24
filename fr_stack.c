@@ -9,7 +9,7 @@ stack_t *xx;
 xx = stack;
 while (stack)
 {
-xxx = stack->next;
+xx = stack->next;
 free(stack);
 stack = xx;
 }
