@@ -1,7 +1,7 @@
 #include "monty.h"
 
 /**
- * pchar_The opcode pchar prints the char at the top of the stack, followed by a new line.
+ * pchar_op - The opcode pchar prints the char at the top of the stack
  * @stack: Pointerto thestack.
  * @line_number: Linenumberof theinstruction.
  * Return: void.
