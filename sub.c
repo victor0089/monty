@@ -17,4 +17,4 @@ exit(EXIT_FAILURE);
 diff = (*stack)->next->n - (*stack)->n;
 pop(stack, line_number);
 (*stack)->n = diff;
-i}
+}
