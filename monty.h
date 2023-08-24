@@ -59,7 +59,7 @@ typedef struct bus_s
 {
 	char *arg;
 	FILE *file;
-	char *content;
+	char *line;
 	int lifi;
 }  bus_t;
 extern bus_t bus;
