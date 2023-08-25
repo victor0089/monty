@@ -35,7 +35,7 @@ int main(int argc, char *argv[])
 	counter++;
 	if (read_line > 0)
 	{
-	get_instruction(line, &stack, counter, file);
+	get_instruction(char *opcode);
 	}
 	free(line);
 	}
