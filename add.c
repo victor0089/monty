@@ -19,7 +19,6 @@ len++;
 if (len < 2)
 {
 fprintf(stderr, "L%d: can't add, stack too short\n", line_number);
-free(bus.line_number);
 free_stack(*stack);
 exit(EXIT_FAILURE);
 }
