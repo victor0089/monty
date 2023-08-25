@@ -1,5 +1,5 @@
 #include "monty.h"
-
+bus_t bus = {NULL, NULL, NULL, 0};
 /**
  * main - Entry pointof theprogram.
  * @argc: Number ofarguments.
