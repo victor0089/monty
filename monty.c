@@ -34,11 +34,6 @@ int main(int argc, char *argv[])
 	bus.line = line;
 	counter++;
 	if (read_line > 0)
-	{
-token = strtok(new_line, " \t$\n;+");
-instruction = get_instruction(token);
-line_number++;
-	}
 	free(line);
 	}
 	free_stack(stack);
