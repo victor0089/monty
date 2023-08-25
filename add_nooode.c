@@ -7,17 +7,19 @@
  * @n: value toadd tothe stack.
  * Return: Theaddressof thenew nodeor NULL.
  */
-stack_t *add_node(stack_t **stack, int n)
+stack_t add_node(stack_t **stack, int n)
 {
-stack_t *noood;
-noood = malloc(sizeof(stack_t));
-if (noood == NULL)
-return (NULL);
-noood->n = n;
-noood->prev = NULL;
-noood->next = *stack;
-if (*stack != NULL)
-(*stack)->prev = noood;
-*stack = noood;
-return (noood);
+	stack_t *new_node, *xx;
+
+	xx = *stack;
+	new_node = malloc(sizeof(stack_t));
+	if (new_node == NULL)
+	{ printf("Error\n");
+		exit(0); }
+	if (xx)
+		xx->prev = new_node;
+	new_node->n = n;
+	new_node->next = *stack;
+	new_node->prev = NULL;
+	*stack = new_node;
 }
