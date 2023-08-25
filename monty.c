@@ -1,44 +1,62 @@
 #include "monty.h"
 bus_t bus = {NULL, NULL, NULL, 0};
 /**
-* main - monty code interpreter
-* @argc: number of arguments
-* @argv: monty file location
-* Return: 0 on success
-*/
+ * main - Entry pointof theprogram.
+ * @argc: Number ofarguments.
+ * @argv: Array ofarguments.
+ * Return: 0 if successful, 1 otherwise.
+ */
 int main(int argc, char *argv[])
 {
-	char *line;
-	FILE *file;
-	size_t size = 0;
-	ssize_t read_line = 1;
-	stack_t *stack = NULL;
-	unsigned int counter = 0;
-
-	if (argc != 2)
-	{
-		fprintf(stderr, "USAGE: monty file\n");
-		exit(EXIT_FAILURE);
-	}
-	file = fopen(argv[1], "r");
-	bus.file = file;
-	if (!file)
-	{
-		fprintf(stderr, "Error: Can't open file %s\n", argv[1]);
-		exit(EXIT_FAILURE);
-	}
-	while (read_line > 0)
-	{
-	line = NULL;
-	read_line = getline(&line, &size, file);
-	bus.line = line;
-	counter++;
-	if (read_line > 0)
-	free(line);
-	}
-	free_stack(stack);
-	fclose(file);
-return (0);
+FILE *file;
+char *line = NULL, *new_line = NULL, *token;
+size_t len = 0;
+ssize_t read;
+unsigned int line_number = 0;
+stack_t *stack = NULL;
+instruction_t *instruction;
+if (argc != 2)
+{
+fprintf(stderr, "USAGE: monty file\n");
+return (EXIT_FAILURE);
+}
+file = fopen(argv[1], "r");
+if (file == NULL)
+{
+fprintf(stderr, "Error: Can't open file %s\n", argv[1]);
+return (EXIT_FAILURE);
+}
+while ((read = getline(&line, &len, file)) != -1)
+{
+new_line = line;
+while (*new_line && *new_line == ' ')
+new_line++;
+if (strcmp(new_line, "$\n") == 0 || is_comment(new_line) == 1)
+continue;
+token = strtok(new_line, " \t$\n;+");
+instruction = get_instruction(token);
+line_number++;
+if (instruction == NULL)
+{
+fprintf(stderr, "L%d: unknown instruction %s\n", line_number, token);
+free_and_close(line, file);
+exit(EXIT_FAILURE);
+}
+instruction->f(&stack, line_number);
+}
+free_and_close(line, file);
+return (EXIT_SUCCESS);
+}
+/**
+ * free_and_close - functionthat freeline andcloses thefile.
+ * @line: Pointer tothe line.
+ * @file: Pointer tothe file.
+ * Return: void.
+ */
+void free_and_close(char *line, FILE *file)
+{
+free(line);
+fclose(file);
 }
 void free_and_close(char *line, FILE *file)
 {
