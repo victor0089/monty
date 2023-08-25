@@ -8,7 +8,7 @@ bus_t bus = {NULL, NULL, NULL, 0};
 */
 int main(int argc, char *argv[])
 {
-	char *line_number;
+	char *line;
 	FILE *file;
 	size_t size = 0;
 	ssize_t read_line = 1;
@@ -29,15 +29,15 @@ int main(int argc, char *argv[])
 	}
 	while (read_line > 0)
 	{
-	line_number = NULL;
-	read_line = getline(&line_number, &size, file);
-	bus.line_number = line_number;
+	line = NULL;
+	read_line = getline(&line, &size, file);
+	bus.line = line_number;
 	counter++;
 	if (read_line > 0)
 	{
-	get_instruction(line_number, &stack, counter, file);
+	get_instruction(line, &stack, counter, file);
 	}
-	free(line_number);
+	free(line);
 	}
 	free_stack(stack);
 	fclose(file);
