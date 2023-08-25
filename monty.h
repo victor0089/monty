@@ -57,6 +57,8 @@ void rotl(stack_t **stack, unsigned int line_number);
 void free_and_close(char *line, FILE *file);
 void free_stack(stack_t *stack);
 int is_comment(char *line);
+void addqueue(stack_t **stack, int n);
+void f_queue(stack_t **stack, unsigned int line);
 /**
  * struct bus_s - variables -args, file, line content
  * @arg: value
