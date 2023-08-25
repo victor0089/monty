@@ -20,7 +20,7 @@ bus.lifi = 1;
 void addqueue(stack_t **stack, int n)
 {
 stack_t *new_node, *xx;
-xx = *head;
+xx = *stack;
 new_node = malloc(sizeof(stack_t));
 if (new_node == NULL)
 {
