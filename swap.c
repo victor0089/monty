@@ -13,7 +13,7 @@ if (*stack == NULL || (*stack)->next == NULL)
 {
 fprintf(stderr, "L%d: can't swap, stack too short\n", line_number);
 fclose(bus.file);
-free(bus.line_number);
+free(bus.line);
 free_stack(*stack);
 exit(EXIT_FAILURE);
 }
