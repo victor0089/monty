@@ -74,3 +74,4 @@ return (0);
 }
 return (1);
 }
+bus_t bus = {NULL, NULL, NULL, 0};
