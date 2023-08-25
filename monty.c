@@ -1,6 +1,22 @@
 #include "monty.h"
 bus_t bus = {NULL, NULL, NULL, 0};
 /**
+ * free_and_close - functionthat freeline andcloses thefile.
+ * @line: Pointer tothe line.
+ * @file: Pointer tothe file.
+ * Return: void.
+ */
+void free_and_close(char *line, FILE *file)
+{
+free(line);
+fclose(file);
+}
+void free_and_close(char *line, FILE *file)
+{
+free(line);
+fclose(file);
+}
+/**
  * main - Entry pointof theprogram.
  * @argc: Number ofarguments.
  * @argv: Array ofarguments.
@@ -46,22 +62,6 @@ instruction->f(&stack, line_number);
 }
 free_and_close(line, file);
 return (EXIT_SUCCESS);
-}
-/**
- * free_and_close - functionthat freeline andcloses thefile.
- * @line: Pointer tothe line.
- * @file: Pointer tothe file.
- * Return: void.
- */
-void free_and_close(char *line, FILE *file)
-{
-free(line);
-fclose(file);
-}
-void free_and_close(char *line, FILE *file)
-{
-free(line);
-fclose(file);
 }
 /**
  * is_comment - function thatcheck ifthe lineiscomment.
