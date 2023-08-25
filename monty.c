@@ -11,11 +11,6 @@ void free_and_close(char *line, FILE *file)
 free(line);
 fclose(file);
 }
-void free_and_close(char *line, FILE *file)
-{
-free(line);
-fclose(file);
-}
 /**
  * main - Entry pointof theprogram.
  * @argc: Number ofarguments.
