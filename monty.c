@@ -1,5 +1,4 @@
 #include "monty.h"
-bus_t bus = {NULL, NULL, NULL, 0};
 /**
  * free_and_close - functionthat freeline andcloses thefile.
  * @line: Pointer tothe line.
