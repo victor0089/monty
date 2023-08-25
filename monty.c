@@ -31,11 +31,11 @@ int main(int argc, char *argv[])
 	{
 	line = NULL;
 	read_line = getline(&line, &size, file);
-	bus.line = line_number;
+	bus.line = line;
 	counter++;
 	if (read_line > 0)
 	{
-	get_instruction(char *opcode);
+	*get_instruction(char *opcode);
 	}
 	free(line);
 	}
