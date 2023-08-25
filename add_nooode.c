@@ -7,7 +7,7 @@
  * @n: value toadd tothe stack.
  * Return: Theaddressof thenew nodeor NULL.
  */
-stack_t add_node(stack_t **stack, int n)
+stack_t *add_node(stack_t **stack, int n)
 {
 stack_t *noood;
 noood = malloc(sizeof(stack_t));
