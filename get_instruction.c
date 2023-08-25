@@ -24,6 +24,7 @@ static instruction_t instructions[] = {
 {"pstr", pstr_op},
 {"rotr", rotr},
 {"rotl", rotl},
+{"queue", queue},
 {NULL, NULL}};
 int i;
 for (i = 0; instructions[i].opcode != NULL; i++)
