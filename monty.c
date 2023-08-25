@@ -35,7 +35,9 @@ int main(int argc, char *argv[])
 	counter++;
 	if (read_line > 0)
 	{
-	*get_instruction(char *opcode);
+token = strtok(new_line, " \t$\n;+");
+instruction = get_instruction(token);
+line_number++;
 	}
 	free(line);
 	}
