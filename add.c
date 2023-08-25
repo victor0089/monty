@@ -8,13 +8,25 @@
  */
 void add(stack_t **stack, unsigned int line_number)
 {
-int summ;
-if (*stack == NULL || (*stack)->next == NULL)
-{
-fprintf(stderr, "L%d: can't add,stack tooshort\n", line_number);
-exit(EXIT_FAILURE);
-}
-summ = (*stack)->n + (*stack)->next->n;
-pop(stack, line_number);
-(*stack)->n = summ;
-}
+	stack_t *h;
+	int len = 0, xx;
+
+	h = *stack;
+	while (h)
+	{
+		h = h->next;
+		len++;
+	}
+	if (len < 2)
+	{
+		fprintf(stderr, "L%d: can't add, stack too short\n", line_number);
+		fclose(bus.file);
+		free(bus.content);
+		free_stack(*stack);
+		exit(EXIT_FAILURE);
+	}
+	h = *stack;
+	xx = h->n + h->next->n;
+	h->next->n = xx;
+	*stack = h->next;
+	free(h);
