@@ -5,7 +5,7 @@
  * @line: line_number
  * Return: no return
 */
-void f_queue(stack_t **stack, unsigned int line)
+void queue(stack_t **stack, unsigned int line)
 {
 (void)stack;
 (void)line;
