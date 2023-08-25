@@ -1,7 +1,7 @@
 #include "monty.h"
 
 /**
- * mod - The opcode mod computes the rest of the division of the second top element of the stack by the top element of the stack.
+ * mod - The opcode mod computes the of the second element of the stack.
  * element ofthestack by.
  * @stack: Pointer tothestack.
  * @line_number: Linenumber oftheinstruction.
