@@ -25,6 +25,7 @@ ssize_t read;
 unsigned int line_number = 0;
 stack_t *stack = NULL;
 instruction_t *instruction;
+bus_t bus = {NULL, NULL, NULL, 0};
 if (argc != 2)
 {
 fprintf(stderr, "USAGE: monty file\n");
@@ -74,4 +75,3 @@ return (0);
 }
 return (1);
 }
-bus_t bus = {NULL, NULL, NULL, 0};
